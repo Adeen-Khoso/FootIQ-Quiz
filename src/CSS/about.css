@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&family=Roboto:wght@800&family=Roboto+Condensed:wght@700&display=swap&family=Montserrat:wght@800&display=swap");
+body {
+  overflow-y: auto;
+  color: white;
+}
+.about-main {
+  display: block;
+  padding: 0;
+}
+.hero-section {
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 80px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 77px;
+}
+.hero-h1 {
+  width: 300px;
+  font-size: 67px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: rgb(36, 3, 88);
+}
+.hero-dis {
+  width: 490px;
+  color: rgb(36, 3, 88);
+  font-size: 22px;
+}
+.about-img {
+  margin-right: -40px;
+  width: 600px;
+  margin-top: 50px;
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-left: 0px;
+  width: 210px;
+  margin-bottom: 18px;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: rgb(105, 64, 172);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about-game {
+  background-color: rgb(105, 64, 172);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.game-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+  width: 1000px;
+}
+.game-h1 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+.game-dis {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.815);
+}
+.game-button {
+  margin-top: 20px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.15s ease;
+  width: 300px;
+}
+
+.game-button::before,
+.game-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7d8082;
+  transition: all 0.15s ease;
+}
+
+.game-button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.game-button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.game-button:active,
+.game-button:focus {
+  outline: none;
+}
+
+.game-button:active::before,
+.game-button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.game-button:active::before {
+  top: 3px;
+}
+
+.game-button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all 0.2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all 0.2s ease;
+}
+
+.button_text {
+  position: relative;
+  height: 30px;
+  margin-top: 9px;
+  color: rgb(255, 255, 255);
+}
+
+.game-button:hover {
+  color: #0f1923;
+}
+
+.game-button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.game-button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(105, 64, 172);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 32px;
+  height: 120px;
+  background: rgba(105, 64, 172, 0.733);
+}
+
+::-webkit-scrollbar-track {
+  background: #e9e9e90c;
+  margin-top: 350px;
+  margin-bottom: 100px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0;
+  }
+  .hero-h1 {
+    margin-top: 30px;
+    width: auto;
+    font-size: 45px;
+  }
+  .hero-dis {
+    width: auto;
+    font-size: 20px;
+  }
+  .about-img {
+    margin: 0px;
+    width: 260px;
+  }
+  .cta span{
+    font-size: 15px;
+  }
+  .about-game{
+    height: 80vh;
+  }
+  .game-text{
+    gap: 20px;
+    margin-top: 70px;
+    width: auto;
+  }
+  .game-h1{
+    font-size: 35px;
+  }
+  .game-dis{
+    font-size: 18px;
+    width: 299px;
+  }
+  .game-button{
+    width: 290px;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 32px;
+    background: rgba(105, 64, 172, 0.733);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #e9e9e90c;
+    margin-bottom:330px ;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-section{
+    padding-left: 190px;
+    padding-right: 170px;
+  }
+  .text{
+    scale: 1.2;
+  }
+  .about-img{
+    scale: 1.3;
+  }
+  .game-text{
+    scale: 1.2;
+    margin-top: 55px;
+  }
+}

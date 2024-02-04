@@ -1,0 +1,361 @@
+body.correct {
+  background-color: rgb(31, 199, 31);
+}
+body.wrong {
+  background-color: red;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -30px;
+  justify-content: center;
+}
+.question-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.question {
+  font-size: 28px;
+  font-family: 'poppins',sans-serif;
+  font-weight: 700;
+}
+.answer-buttons {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn {
+  width: 230px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(105, 64, 172);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+.btn:hover {
+  border-radius: 6px;
+  color: rgb(212, 212, 212);
+}
+.btn.correct {
+  background-color: rgb(41, 230, 41);
+}
+.btn.wrong {
+  background-color: red;
+}
+.choose-img{
+  width: 190px;
+}
+.type-container {
+  display: flex;
+  gap: 20px;
+}
+.type-btn {
+  font-size: 17px;
+  padding: 1px;
+  border-radius: 80px;
+  border: 1px solid rgba(100, 36, 143, 0.445);
+  width: 280px;
+  background-color: white;
+  color: #333;
+}
+.type-btn:hover{
+  background-color: rgb(105, 64, 172);
+  color: white;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100vw;
+  gap: 50px;
+}
+.start-h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+.next-btn {
+  background-color: rgb(36, 3, 88);
+  margin-top: -35px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.dull {
+  z-index: 1;
+  background-color: rgba(172, 172, 172, 0.808);
+}
+.popup {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 800px;
+  position: absolute;
+  background-color: rgba(243, 243, 243, 0.603);
+  backdrop-filter: blur(15px);
+  border-radius: 32px;
+  border: 2px solid green;
+  gap: 20px;
+  scale: 0.5;
+  transition: all 0.3s ease;
+}
+
+.progress-loader {
+  order: 4;
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  background: rgba(46, 46, 172, 0.253);
+  height: 10px;
+  border-radius: 7px;
+}
+
+.progress {
+  width: 1px;
+  height: 10px;
+  border-radius: 7px;
+  background: rgb(0, 226, 11);
+  transition: 2s;
+  animation: loading_44 2.5s cubic-bezier(.4,1.01,1,1) ;
+}
+
+@keyframes loading_44 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+  }
+  100%{
+  width:100%;
+  }
+}
+
+.h1 {
+  font-family: 'poppins',sans-serif;
+  order: 1;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform:uppercase ;
+}
+.p {
+  order: 3;
+  font-family: 'poppins', sans-serif;
+  font-size: 30px;
+  text-transform:uppercase ;
+  color: rgba(77, 77, 77, 0.705);
+}
+.tick-img {
+  order: 2;
+  width: 140px;
+}
+.restart-btn{
+  margin-top: -40px;
+}
+.exit-btn {
+  display: block;
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  left: 30px;
+  top: 90px;
+}
+
+.exit-btn:before,
+.exit-btn:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.exit-btn:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+  transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.exit-btn:after {
+  border: 4px solid rgb(105, 64, 172);
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+  transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.exit-btn:hover:before,
+.exit-btn:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+  transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.exit-btn:hover:after,
+.exit-btn:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+  transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #676767;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+
+.scoreCeleb{
+  position: absolute;
+  font-size: 50px;
+  top: 350px;
+  color: rgb(22, 185, 22);
+  font-family: 'righteous', sans-serif;
+  transition: all 1.2s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.score-hide{
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+@keyframes zoomOut {
+  to {
+    scale: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    scale: 1.1;
+  }
+  .exit-btn{
+    left: 130px;
+    top: 120px;
+  }
+  .nav {
+    scale: 1;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .container{
+    margin-top: -15px;
+  }
+  .start-h1 {
+    width: 300px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: -30px;
+    font-size: 25px;
+  }
+  .start-btn {
+    margin-top: -20px;
+  }
+  .choose-img{
+    width: 300px;
+  }
+
+  .exit-btn{
+    top: 60px;
+    left: 15px;
+  }
+  .question-container {   
+    margin-top: 100px;
+    width: 75%;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .question {
+    font-weight: 100;
+    margin-top: -20px;
+    font-size: 19px;
+  }
+  .answer-buttons {
+    margin-top: -17px;
+    width: 280px;
+    gap: 12px;
+  }
+  .btn {
+    width: 160px;
+    font-size: 17px;
+  }
+  .type-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .type-btn{
+    padding-bottom: 1.8px;
+  }
+  .next-btn{
+    margin-top: -65px;
+  }
+  .popup{
+    width: 520px;
+    height: 530px;
+  }
+}

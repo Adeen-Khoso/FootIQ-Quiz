@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FootIQ | Quiz</title>
+    <link rel="stylesheet" href="src/CSS/index.css" />
+    <link rel="stylesheet" href="src/CSS/navbar.css" />
+    <link rel="stylesheet" href="src/CSS/quiz.css" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <script defer src="src/JS/quiz.js"></script>
+    <script defer src="src/JS/hamburger.js"></script>
+  </head>
+  <body id="body">
+
+    <nav class="nav">
+      <div class="nav-branding">
+        <h1 class="b-h1">FootIQ</h1>
+        <div class="b-img">
+          <img src="assets/logo.png" class="logo" alt="" />
+        </div>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="navigation" id="navigation">
+        <a href="index.html" class="link">Home</a>
+        <a href="about.html" class="link">About-Us</a>
+        <a href="https://www.instagram.com/adeen_khoso" class="link"
+          >Developer</a
+          >
+        </div>
+        <div class="nav-cta">
+          <a href="quiz.html" class="quiz-cta" >Quiz</a>
+      </div>
+    </nav>
+
+    <main class="container" id="main">
+      <div id="question-container" class="question-container hide">
+        <div class="questionNumber" id="questionNumber"></div>
+
+        <button class="exit-btn hide" id="exit-btn">
+          <div class="button-box">
+            <span class="button-elem">
+              <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+              </svg>
+            </span>
+            <span class="button-elem">
+              <svg viewBox="0 0 46 40">
+                <path
+                  d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+              </svg>
+            </span>
+          </div>
+        </button>
+        <div id="question" class="question">
+          Who has the most goals in Europe ?
+        </div>
+        <div id="answer-container" class="answer-buttons">
+          <button class="btn">Answer1</button>
+          <button class="btn">answer2</button>
+          <button class="btn">answer3</button>
+          <button class="btn">answer4</button>
+        </div>
+        <div class="scorebox" id="scorebox">Score : 0 points</div>
+      </div>
+      <div class="controls">
+        <img
+          src="assets/choose-img.png"
+          class="choose-img"
+          id="quiz-img"
+          alt=""
+        />
+        <h1 class="start-h1" id="startH1">Choose the type of <span class="highlighted-text">Quiz</span></h1>
+
+        <div class="type-container" id="type-container">
+          <button id="type legends" class="type-btn  legends">
+            Legends of the Game
+          </button>
+          <button id="type national" class="type-btn  national">
+            National Teams
+          </button>
+          <button id="type mixed" class="type-btn  mixed">
+            Mixed Challenge
+          </button>
+        </div>
+
+        <button id="restart-btn" class="btn restart-btn">Restart</button>
+
+        <button id="next-btn" class="next-btn btn hide">Next -></button>
+      </div>
+
+      <div class="popup hide" id="popup">
+        <img class="tick-img" src="assets/success-img.png" alt="" />
+        <h1 class="h1">Success</h1>
+        <p class="p">Quiz Completed</p>
+        <p class="p" id="popup-score"></p>
+        <div class="progress-loader">
+          <div class="progress"></div>
+      </div>
+      </div>
+
+
+    </main>
+  </body>
+</html>
