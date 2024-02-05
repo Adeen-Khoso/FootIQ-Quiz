@@ -436,15 +436,6 @@ const mixedQuestions = [
     ],
   },
   {
-    question: "Which player has the most Instagram Followers? ",
-    answers: [
-      { text: "Lionel Messi ", correct: false },
-      { text: "Neymar Jr", correct: false },
-      { text: "Cr. Ronaldo", correct: true },
-      { text: "Eden Hazard", correct: false },
-    ],
-  },
-  {
     question: "Which player has scored more penalties between them ? ",
     answers: [
       { text: "Kylian Mbappe", correct: false },
